@@ -27,12 +27,17 @@ impl Car {
 // and car is a vehicle. Equivalent to an interface in c#
 // I am not sure if a car HAS to have an implementation of start
 pub trait Vehicle {
-   fn start(&self) -> bool;
+   fn start(&mut self ) -> &mut Self;
+    fn drive(&mut self ) -> &mut Self;
 }
 
 impl Vehicle for Car {
-    fn start(&self) -> bool {
+    fn start(&mut self) -> &mut Self {
         println!("started {}",self.name);
-        true
+        self
+    }
+    fn drive(&mut self) -> &mut Self {
+        println!("I am driving my  {}",self.name);
+        self
     }
 }
