@@ -13,10 +13,8 @@ impl Car {
         Car{name:"default".to_string()}
     }
 
-    pub fn build_car(_name: String) -> Car {
-        Car {
-            name: _name
-        }
+    pub fn build_car(_name: String) -> Self {
+        Car {name: _name}
     }
     pub fn pump_up_tyres(&self) -> bool{
         true

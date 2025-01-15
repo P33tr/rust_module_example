@@ -1,6 +1,6 @@
 
-mod domain_types;
-use crate::domain_types::*;
+mod models;
+use  models::domain_types::*;
 
 fn main() {
     println!("Hello, world!");
@@ -11,7 +11,7 @@ fn main() {
     let mut a_car = Car::new();
     println!("{}", a_car.name);
 
-    let _ = my_car.start()
+     my_car.start()
         .drive();
 
     a_car.start()
